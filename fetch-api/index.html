@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Cep</title>
+  </head>
+  <body>
+    <main>
+      <h1>Consulta de CEP</h1>
+      <div class="cep-area">
+        <label for="cep">Digite um CEP:</label>
+        <input class="cep-input" type="text" placeholder="CEP" />
+        <button onclick="consultCep()">Consultar</button>
+      </div>
+      <div class="results">
+        <div class="street">
+          <p>Rua:</p>
+          <span class="street-result">asd</span>
+        </div>
+        <div class="district">
+          <p>Bairro:</p>
+          <span class="district-result">asd</span>
+        </div>
+        <div class="city">
+          <p>Cidade:</p>
+          <span class="city-result">asd</span>
+        </div>
+        <div class="state">
+          <p>Estado:</p>
+          <span class="state-result">asd</span>
+        </div>
+      </div>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
