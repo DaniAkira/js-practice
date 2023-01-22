@@ -13,24 +13,18 @@ const consultBtn = document.querySelector(".consult-btn");
 const generalDiv = document.querySelector(".general");
 const errorMessage = document.querySelector(".general p");
 
-
-
-
 let cepWhithoutHeaving = "";
 
 function consultCep() {
     const cep = document.querySelector(".cep-input").value;
     
-    if((cep.indexOf("-") === -1) && (cep.length == 8)) {
-        cepWhithoutHeaving = cep
-        getData(cepWhithoutHeaving);
-        toggleBtns();
-    }else if (cep.length == 9) {
+    if(cep.indexOf("-") === -1 && cep.length == 8 && !isNaN(cep)) {
+        getData(cep);
+    }else if (cep.length == 9 && verifyIsNumber(cep)) {
         replaceHeaving(cep);
         getData(cepWhithoutHeaving);
-        toggleBtns();
     }else {
-        showErrorFormat(); 
+        showFormatError(); 
         toggleBtns();
     }
 }
@@ -49,6 +43,23 @@ function resetCep() {
     }
 }
 
+function verifyIsNumber(string) {
+    let stringArray = [];
+    let firstString = "";
+    let secondString = "";
+
+    stringArray = string.split("-");
+    firstString = stringArray[0];
+    secondString = stringArray[1];
+
+    if(!isNaN(firstString) && !isNaN(secondString) && firstString.length + secondString.length == 8) {
+        return true;
+    }else {
+        return false
+    }
+
+}
+
 function replaceHeaving(string) {
     cepWhithoutHeaving = string.replace("-", "");
     return cepWhithoutHeaving
@@ -61,10 +72,11 @@ async function getData(cep){
             }).then(data => {
                 if (data.erro == true){
                     showError();
-                    console.log(`${typeof(errorMessage)} OIOI`)
+                    toggleBtns();
                 }else {
                     showResults(data);
                     toggleResults();
+                    toggleBtns();
                 }
         })    
 }
@@ -95,7 +107,7 @@ function showError() {
     generalDiv.appendChild(errorHtml);
 }
 
-function showErrorFormat() {
+function showFormatError() {
     const errorMessage = `Formato inválido, digite o CEP nos formatos "00000000" ou "00000-000"`
     const errorHtml = document.createElement("p");
 
