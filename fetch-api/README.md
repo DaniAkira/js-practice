@@ -14,7 +14,7 @@ Projeto criado para entender o uso de função assíncrona com requisições par
   * Pratica na lógica com as verificações para não gerar bugs na consulta
   
 ## Onde encontra?
- ## [Click Aqui](https://resplendent-torte-bb75eb.netlify.app/)
+ ## [Click Aqui](https://consulta-cep-app.netlify.app/)
  
 ## Tecnologias usadas no desenvolvimento
   * Javascript
