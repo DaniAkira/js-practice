@@ -1,1 +1,1 @@
-Projeto criado para entender o uso de função assíncrona com requisições para api viaCep com fetch.
+Projeto criado para entender o uso de função assíncrona com requisição para api viaCep com fetch.

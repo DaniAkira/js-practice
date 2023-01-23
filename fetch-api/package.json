@@ -1,0 +1,12 @@
+{
+  "name": "fetch-api",
+  "version": "1.0.0",
+  "description": "Projeto criado para entender o uso de função assíncrona com requisição para api viaCep com fetch.",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
