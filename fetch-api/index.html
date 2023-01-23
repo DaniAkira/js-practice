@@ -8,14 +8,13 @@
     <title>Cep</title>
   </head>
   <body>
-    <div class="blur"></div>
     <main class="general">
       <h1>Consulta de CEP</h1>
       <div class="cep-area">
         <label for="cep">Digite um CEP:</label>
         <input class="cep-input" type="text" placeholder="CEP" />
-        <button class="consult-btn"><i class="fa-solid fa-magnifying-glass-location"></i>Consultar</button>
-        <button class="reset-btn hide">
+        <button onclick="consultCep()" class="consult-btn"><i class="fa-solid fa-magnifying-glass-location"></i>Consultar</button>
+        <button onclick="resetCep()" class="reset-btn hide">
           Fazer outra consulta
         </button>
       </div>

@@ -6,13 +6,7 @@ const input = document.querySelector(".cep-input");
 
 const generalDiv = document.querySelector(".general");
 
-const consultCepBtn = document.querySelector(".consult-btn");
-const resetCepBtn = document.querySelector(".reset-btn");
-
 let cepWhithoutHeaving = "";
-
-consultCepBtn.addEventListener("click", consultCep());
-resetCepBtn.addEventListener("click", resetCepBtn());
 
 function consultCep() {
     const cep = document.querySelector(".cep-input").value;
