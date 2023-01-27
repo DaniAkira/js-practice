@@ -4,7 +4,7 @@ console.log("Conversor de números arábicos em romanos: ");
 
 let numString = input.question("Digite um Numero: ");
 
-let numb = Number(numString);
+let numb = Number(numString)
 
 let roman = "";
 
