@@ -10,7 +10,7 @@ function showResults(data) {
     district.innerHTML = data.bairro
     city.innerHTML = data.localidade
     state.innerHTML = data.uf
-}
+};
 
 function showError() {
     const errorMessage = `Endereço não existe em nosso banco de dados`;
@@ -20,7 +20,7 @@ function showError() {
     errorHtml.innerHTML = errorMessage;
 
     generalDiv.appendChild(errorHtml);
-}
+};
 
 function showFormatError() {
     const errorMessage = `Formato inválido, digite o CEP nos formatos "00000000" ou "00000-000"`
@@ -30,11 +30,11 @@ function showFormatError() {
     errorHtml.innerHTML = errorMessage;
 
     generalDiv.appendChild(errorHtml);
-}
+};
 
 function removeErrorMessage() {
     const errorText = document.querySelector(".error-message");
     errorText.remove();
-}
+};
 
 export { showError, showFormatError, showResults, removeErrorMessage }

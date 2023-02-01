@@ -13,11 +13,11 @@ function verifyIsNumber(string) {
         return false
     }
 
-}
+};
 
 function replaceHeaving(string) {
     cepWhithoutHeaving = string.replace("-", "");
     return cepWhithoutHeaving
-}
+};
 
 export { verifyIsNumber, replaceHeaving }

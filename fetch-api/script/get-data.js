@@ -1,5 +1,5 @@
-import { showError } from "./error&results";
-import { toggleBtns, toggleResults, showResults } from "./toggle";
+import { showError, showResults } from "./error&results";
+import { toggleBtns, toggleResults } from "./toggle";
 
 function getData(cep) {
     fetch(`https://viacep.com.br/ws/${cep}/json/`)
@@ -15,6 +15,6 @@ function getData(cep) {
                     toggleBtns();
                 }
         })    
-}
+};
 
 export default getData
